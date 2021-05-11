@@ -32,7 +32,7 @@ function Footer()
 }
 }
  
-$dbConnection = mysqli_connect('localhost', 'root', '', 'animshop');
+$dbConnection = mysqli_connect('localhost', 'root', '', 'web');
 $query  = "SELECT * FROM etudiants";
 $result = mysqli_query($dbConnection, $query);
 

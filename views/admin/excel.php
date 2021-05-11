@@ -1,10 +1,10 @@
 <?php
 
-$connect=mysqli_connect("localhost","root","","animshop");
+$connect=mysqli_connect("localhost","root","","web");
 $output='';
 if(isset($_POST["export_excel"]))
 {
-   $sql="SELECT Id,Nom,Prenom FROM etudiants";
+   $sql="SELECT id,nom,prenom FROM etudiants";
    $result = mysqli_query($connect,$sql);
    if(mysqli_num_rows($result)>0)
    { $output .= '
@@ -18,9 +18,9 @@ if(isset($_POST["export_excel"]))
     while($row=mysqli_fetch_array($result))
     { $output .='
     <tr> 
-        <td>'.$row["Id"].'</td>
-         <td>'.$row["Nom"].'</td>
-         <td>'.$row["Prenom"].'</td>
+        <td>'.$row["id"].'</td>
+         <td>'.$row["nom"].'</td>
+         <td>'.$row["prenom"].'</td>
     </tr>
     ';
     }
